@@ -16,6 +16,7 @@ class SignupViewController: UIViewController {
     }
     
     @IBAction func signUp(_ sender: UIButton) {
-        performSegue(withIdentifier: "confirm", sender: sender)
+        performSegue(withIdentifier: "confirm", sender: self)
     }
+    
 }

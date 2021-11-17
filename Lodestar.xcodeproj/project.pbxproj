@@ -16,6 +16,7 @@
 		D4AD19922744BE13001F689C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4AD19912744BE13001F689C /* LoginViewController.swift */; };
 		D4AD19942744BE8E001F689C /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4AD19932744BE8E001F689C /* SignupViewController.swift */; };
 		D4AD19962744C123001F689C /* ConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4AD19952744C123001F689C /* ConfirmationViewController.swift */; };
+		D4AD19982744D1D9001F689C /* ProfileSetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4AD19972744D1D9001F689C /* ProfileSetupViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		D4AD19912744BE13001F689C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		D4AD19932744BE8E001F689C /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		D4AD19952744C123001F689C /* ConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationViewController.swift; sourceTree = "<group>"; };
+		D4AD19972744D1D9001F689C /* ProfileSetupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSetupViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				D4AD197F2744AB20001F689C /* SceneDelegate.swift */,
 				D4AD19812744AB20001F689C /* ViewController.swift */,
 				D4AD19832744AB20001F689C /* Main.storyboard */,
+				D4AD19972744D1D9001F689C /* ProfileSetupViewController.swift */,
 				D4AD19952744C123001F689C /* ConfirmationViewController.swift */,
 				D4AD19932744BE8E001F689C /* SignupViewController.swift */,
 				D4AD19912744BE13001F689C /* LoginViewController.swift */,
@@ -152,6 +155,7 @@
 				D4AD19822744AB20001F689C /* ViewController.swift in Sources */,
 				D4AD19942744BE8E001F689C /* SignupViewController.swift in Sources */,
 				D4AD197E2744AB20001F689C /* AppDelegate.swift in Sources */,
+				D4AD19982744D1D9001F689C /* ProfileSetupViewController.swift in Sources */,
 				D4AD19802744AB20001F689C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
