@@ -9,7 +9,7 @@ import UIKit
 
 struct Setting {
     var name: String
-    var value: Any?
+    var value: Any
 }
 
 class ProfileSetupViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
@@ -20,7 +20,14 @@ class ProfileSetupViewController: UIViewController, UITableViewDataSource, UITab
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        profileSettings = [Setting(name: "Age", value: "Fill in")]
+        profileSettings = [
+            Setting(name: "Age", value: "Fill in"),
+            Setting(name: "Height", value: "Fill in"),
+            Setting(name: "Weight", value: "Fill in"),
+            Setting(name: "Ethnicity", value: "Fill in"),
+            Setting(name: "Relationship Status", value: "Fill in"),
+            Setting(name: "Gender", value: "Fill in"),
+        ]
     }
     
     // Mark: UITableView DataSource and Delegate methods
