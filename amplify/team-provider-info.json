@@ -1,0 +1,20 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-lodestar-dev-01159-authRole",
+      "UnauthRoleArn": "arn:aws:iam::954282926070:role/amplify-lodestar-dev-01159-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::954282926070:role/amplify-lodestar-dev-01159-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-lodestar-dev-01159-deployment",
+      "UnauthRoleName": "amplify-lodestar-dev-01159-unauthRole",
+      "StackName": "amplify-lodestar-dev-01159",
+      "StackId": "arn:aws:cloudformation:us-east-1:954282926070:stack/amplify-lodestar-dev-01159/652a4420-49c0-11ec-8075-125f876cdce7",
+      "AmplifyAppId": "d1ay5xl29469hn"
+    },
+    "categories": {
+      "auth": {
+        "lodestar0e7e3ec9": {}
+      }
+    }
+  }
+}

@@ -65,15 +65,21 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4mU-dF-Q6p">
                                         <rect key="frame" x="0.0" y="272.5" width="414" height="273"/>
                                         <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="mobile" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TUp-Hl-hEa">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TUp-Hl-hEa">
                                                 <rect key="frame" x="60" y="40" width="294" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="done" textContentType="email"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="j3X-M2-IdX" id="EeM-h1-qxD"/>
+                                                </connections>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GVB-vk-5kL">
                                                 <rect key="frame" x="60" y="199" width="294" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="j3X-M2-IdX" id="Uvy-5A-OkF"/>
+                                                </connections>
                                             </textField>
                                         </subviews>
                                         <constraints>
@@ -97,6 +103,9 @@
                                                         <fragment content="Log In"/>
                                                     </attributedString>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="login:" destination="j3X-M2-IdX" eventType="touchUpInside" id="jSO-g3-0as"/>
+                                                </connections>
                                             </button>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wc3-st-eTD">
                                                 <rect key="frame" x="80" y="212.5" width="254" height="60"/>
@@ -145,6 +154,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="DUs-kN-jSh"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="TUp-Hl-hEa" id="MVv-9E-Bbe"/>
+                        <outlet property="passwordTextField" destination="GVB-vk-5kL" id="w20-h2-a6M"/>
+                        <segue destination="USS-mF-KnC" kind="show" identifier="login" id="Ick-2f-g2g"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R9R-eI-7bf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -186,7 +200,7 @@
                                                     <constraint firstAttribute="width" constant="120" id="UJV-MX-KCx"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
-                                                <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done" enablesReturnKeyAutomatically="YES" textContentType="one-time-code"/>
+                                                <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES" textContentType="one-time-code"/>
                                                 <connections>
                                                     <outlet property="delegate" destination="tjE-1M-ah9" id="iIO-Vg-J7W"/>
                                                 </connections>
@@ -224,7 +238,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="CXQ-I3-Fva"/>
                     <connections>
-                        <segue destination="USS-mF-KnC" kind="show" identifier="setupProfile" id="SgH-nh-32R"/>
+                        <outlet property="confirmationTextField" destination="p1S-51-Ruv" id="bFl-Hj-vsz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BLX-Lb-2q0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -325,7 +339,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ybg-Oo-XCN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4271" y="119"/>
+            <point key="canvasLocation" x="1464" y="864"/>
         </scene>
         <!--Signup View Controller-->
         <scene sceneID="9ik-Wj-GTq">
@@ -369,20 +383,29 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8CN-rb-SSm">
                                         <rect key="frame" x="0.0" y="272.5" width="414" height="273"/>
                                         <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="mobile" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OFl-Pu-2m3">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OFl-Pu-2m3">
                                                 <rect key="frame" x="60" y="0.0" width="294" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="email"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="S7g-wP-Jff" id="j7b-SE-Eu0"/>
+                                                </connections>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wT3-NT-xdO">
                                                 <rect key="frame" x="60" y="239" width="294" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="S7g-wP-Jff" id="uYU-bL-MT9"/>
+                                                </connections>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XqA-We-Rfm">
                                                 <rect key="frame" x="60" y="119.5" width="294" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="S7g-wP-Jff" id="LGf-fh-rko"/>
+                                                </connections>
                                             </textField>
                                         </subviews>
                                         <constraints>
@@ -467,6 +490,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="PlI-K4-CNM"/>
                     <connections>
+                        <outlet property="mobileTextField" destination="OFl-Pu-2m3" id="cq1-Mk-ybx"/>
+                        <outlet property="passwordTextField" destination="XqA-We-Rfm" id="tgo-7x-qOv"/>
                         <segue destination="tjE-1M-ah9" kind="show" identifier="confirm" id="erq-PJ-Sbk"/>
                     </connections>
                 </viewController>

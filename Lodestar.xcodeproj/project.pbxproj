@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BFBA4361AD32C5A5E741E348 /* amplifyconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 4A41C944B869487086BE9035 /* amplifyconfiguration.json */; };
+		C3E4B09DC40B4D73265CFB97 /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = A8A5E08CAE76391930A928DE /* awsconfiguration.json */; };
+		D40603AC2748BD0200634FCF /* amplifyconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = D40603AA2748BD0200634FCF /* amplifyconfiguration.json */; };
+		D40603AD2748BD0200634FCF /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = D40603AB2748BD0200634FCF /* awsconfiguration.json */; };
+		D40603B02748C05B00634FCF /* AWSCognitoAuthPlugin in Frameworks */ = {isa = PBXBuildFile; productRef = D40603AF2748C05B00634FCF /* AWSCognitoAuthPlugin */; };
+		D40603B22748C05B00634FCF /* Amplify in Frameworks */ = {isa = PBXBuildFile; productRef = D40603B12748C05B00634FCF /* Amplify */; };
+		D40603B42748C07800634FCF /* CloudService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40603B32748C07800634FCF /* CloudService.swift */; };
+		D40603B62748C29F00634FCF /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40603B52748C29F00634FCF /* UserData.swift */; };
 		D4AD197E2744AB20001F689C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4AD197D2744AB20001F689C /* AppDelegate.swift */; };
 		D4AD19802744AB20001F689C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4AD197F2744AB20001F689C /* SceneDelegate.swift */; };
 		D4AD19822744AB20001F689C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4AD19812744AB20001F689C /* ViewController.swift */; };
@@ -20,6 +28,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4A41C944B869487086BE9035 /* amplifyconfiguration.json */ = {isa = PBXFileReference; explicitFileType = text.json; path = amplifyconfiguration.json; sourceTree = "<group>"; };
+		A8A5E08CAE76391930A928DE /* awsconfiguration.json */ = {isa = PBXFileReference; explicitFileType = text.json; path = awsconfiguration.json; sourceTree = "<group>"; };
+		D40603AA2748BD0200634FCF /* amplifyconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = amplifyconfiguration.json; sourceTree = "<group>"; };
+		D40603AB2748BD0200634FCF /* awsconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = awsconfiguration.json; sourceTree = "<group>"; };
+		D40603B32748C07800634FCF /* CloudService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudService.swift; sourceTree = "<group>"; };
+		D40603B52748C29F00634FCF /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		D4AD197A2744AB20001F689C /* Lodestar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lodestar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4AD197D2744AB20001F689C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D4AD197F2744AB20001F689C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,17 +53,31 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D40603B02748C05B00634FCF /* AWSCognitoAuthPlugin in Frameworks */,
+				D40603B22748C05B00634FCF /* Amplify in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CBA39B637C6FEC5C9A08DD61 /* AmplifyConfig */ = {
+			isa = PBXGroup;
+			children = (
+				A8A5E08CAE76391930A928DE /* awsconfiguration.json */,
+				4A41C944B869487086BE9035 /* amplifyconfiguration.json */,
+			);
+			name = AmplifyConfig;
+			sourceTree = "<group>";
+		};
 		D4AD19712744AB20001F689C = {
 			isa = PBXGroup;
 			children = (
+				D40603AA2748BD0200634FCF /* amplifyconfiguration.json */,
+				D40603AB2748BD0200634FCF /* awsconfiguration.json */,
 				D4AD197C2744AB20001F689C /* Lodestar */,
 				D4AD197B2744AB20001F689C /* Products */,
+				CBA39B637C6FEC5C9A08DD61 /* AmplifyConfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +95,7 @@
 				D4AD197D2744AB20001F689C /* AppDelegate.swift */,
 				D4AD197F2744AB20001F689C /* SceneDelegate.swift */,
 				D4AD19812744AB20001F689C /* ViewController.swift */,
+				D40603B52748C29F00634FCF /* UserData.swift */,
 				D4AD19832744AB20001F689C /* Main.storyboard */,
 				D4AD19972744D1D9001F689C /* ProfileSetupViewController.swift */,
 				D4AD19952744C123001F689C /* ConfirmationViewController.swift */,
@@ -75,6 +104,7 @@
 				D4AD19862744AB23001F689C /* Assets.xcassets */,
 				D4AD19882744AB23001F689C /* LaunchScreen.storyboard */,
 				D4AD198B2744AB23001F689C /* Info.plist */,
+				D40603B32748C07800634FCF /* CloudService.swift */,
 			);
 			path = Lodestar;
 			sourceTree = "<group>";
@@ -95,6 +125,10 @@
 			dependencies = (
 			);
 			name = Lodestar;
+			packageProductDependencies = (
+				D40603AF2748C05B00634FCF /* AWSCognitoAuthPlugin */,
+				D40603B12748C05B00634FCF /* Amplify */,
+			);
 			productName = Lodestar;
 			productReference = D4AD197A2744AB20001F689C /* Lodestar.app */;
 			productType = "com.apple.product-type.application";
@@ -123,6 +157,9 @@
 				Base,
 			);
 			mainGroup = D4AD19712744AB20001F689C;
+			packageReferences = (
+				D40603AE2748C05B00634FCF /* XCRemoteSwiftPackageReference "amplify-ios" */,
+			);
 			productRefGroup = D4AD197B2744AB20001F689C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,8 +175,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4AD198A2744AB23001F689C /* LaunchScreen.storyboard in Resources */,
+				D40603AD2748BD0200634FCF /* awsconfiguration.json in Resources */,
+				D40603AC2748BD0200634FCF /* amplifyconfiguration.json in Resources */,
 				D4AD19872744AB23001F689C /* Assets.xcassets in Resources */,
 				D4AD19852744AB20001F689C /* Main.storyboard in Resources */,
+				C3E4B09DC40B4D73265CFB97 /* awsconfiguration.json in Resources */,
+				BFBA4361AD32C5A5E741E348 /* amplifyconfiguration.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,8 +194,10 @@
 				D4AD19962744C123001F689C /* ConfirmationViewController.swift in Sources */,
 				D4AD19922744BE13001F689C /* LoginViewController.swift in Sources */,
 				D4AD19822744AB20001F689C /* ViewController.swift in Sources */,
+				D40603B62748C29F00634FCF /* UserData.swift in Sources */,
 				D4AD19942744BE8E001F689C /* SignupViewController.swift in Sources */,
 				D4AD197E2744AB20001F689C /* AppDelegate.swift in Sources */,
+				D40603B42748C07800634FCF /* CloudService.swift in Sources */,
 				D4AD19982744D1D9001F689C /* ProfileSetupViewController.swift in Sources */,
 				D4AD19802744AB20001F689C /* SceneDelegate.swift in Sources */,
 			);
@@ -305,6 +348,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = AJP4A9LKAH;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Lodestar/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -312,6 +356,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -332,6 +377,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = AJP4A9LKAH;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Lodestar/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -339,6 +385,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -374,6 +421,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D40603AE2748C05B00634FCF /* XCRemoteSwiftPackageReference "amplify-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/aws-amplify/amplify-ios";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 1.9.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D40603AF2748C05B00634FCF /* AWSCognitoAuthPlugin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D40603AE2748C05B00634FCF /* XCRemoteSwiftPackageReference "amplify-ios" */;
+			productName = AWSCognitoAuthPlugin;
+		};
+		D40603B12748C05B00634FCF /* Amplify */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D40603AE2748C05B00634FCF /* XCRemoteSwiftPackageReference "amplify-ios" */;
+			productName = Amplify;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D4AD19722744AB20001F689C /* Project object */;
 }
