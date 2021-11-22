@@ -19,6 +19,6 @@ class SettingsViewController: UIViewController {
         // TODO: This is async, use a callback to update UI
         CloudService.shared.signOut()
         
-        self.navigationController?.popToRootViewController(animated: false)
+        self.navigationController?.popToRootViewController(animated: true)
     }
 }

@@ -81,14 +81,32 @@
                                                     <outlet property="delegate" destination="j3X-M2-IdX" id="Uvy-5A-OkF"/>
                                                 </connections>
                                             </textField>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GgZ-Kp-HeY">
+                                                <rect key="frame" x="60" y="84" width="294" height="0.0"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Italic" family="Helvetica Neue" pointSize="15"/>
+                                                <color key="textColor" systemColor="systemRedColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GLD-Ww-4Iw">
+                                                <rect key="frame" x="60" y="243" width="294" height="0.0"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Italic" family="Helvetica Neue" pointSize="15"/>
+                                                <color key="textColor" systemColor="systemRedColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <constraints>
                                             <constraint firstItem="GVB-vk-5kL" firstAttribute="trailing" secondItem="TUp-Hl-hEa" secondAttribute="trailing" id="Ba6-4M-xHz"/>
+                                            <constraint firstItem="GLD-Ww-4Iw" firstAttribute="leading" secondItem="GVB-vk-5kL" secondAttribute="leading" id="CzX-F7-7pE"/>
+                                            <constraint firstItem="GgZ-Kp-HeY" firstAttribute="trailing" secondItem="TUp-Hl-hEa" secondAttribute="trailing" id="DGa-tW-21j"/>
                                             <constraint firstAttribute="trailing" secondItem="TUp-Hl-hEa" secondAttribute="trailing" constant="60" id="HzJ-Lq-EcL"/>
                                             <constraint firstItem="TUp-Hl-hEa" firstAttribute="leading" secondItem="4mU-dF-Q6p" secondAttribute="leading" constant="60" id="MPB-Pm-Qcc"/>
+                                            <constraint firstItem="GLD-Ww-4Iw" firstAttribute="trailing" secondItem="GVB-vk-5kL" secondAttribute="trailing" id="MmP-Mo-MGg"/>
                                             <constraint firstAttribute="bottom" secondItem="GVB-vk-5kL" secondAttribute="bottom" constant="40" id="Nnp-Wj-Epn"/>
                                             <constraint firstItem="TUp-Hl-hEa" firstAttribute="top" secondItem="4mU-dF-Q6p" secondAttribute="top" constant="40" id="P35-Qe-cxw"/>
+                                            <constraint firstItem="GgZ-Kp-HeY" firstAttribute="leading" secondItem="TUp-Hl-hEa" secondAttribute="leading" id="eQY-ia-ddS"/>
+                                            <constraint firstItem="GLD-Ww-4Iw" firstAttribute="top" secondItem="GVB-vk-5kL" secondAttribute="bottom" constant="10" id="fCn-hW-Phj"/>
                                             <constraint firstItem="GVB-vk-5kL" firstAttribute="leading" secondItem="TUp-Hl-hEa" secondAttribute="leading" id="fF2-2L-IvU"/>
+                                            <constraint firstItem="GgZ-Kp-HeY" firstAttribute="top" secondItem="TUp-Hl-hEa" secondAttribute="bottom" constant="10" id="v6s-2Z-DYt"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wdL-AL-E4Y">
@@ -155,7 +173,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="DUs-kN-jSh"/>
                     <connections>
+                        <outlet property="emailErrorLabel" destination="GgZ-Kp-HeY" id="yxV-Y2-ngN"/>
                         <outlet property="emailTextField" destination="TUp-Hl-hEa" id="MVv-9E-Bbe"/>
+                        <outlet property="passwordErrorLabel" destination="GLD-Ww-4Iw" id="5ic-ss-Pxk"/>
                         <outlet property="passwordTextField" destination="GVB-vk-5kL" id="w20-h2-a6M"/>
                         <segue destination="3Mm-F1-g7u" kind="show" identifier="login" id="MMJ-xT-x3O"/>
                     </connections>
@@ -582,7 +602,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Mns-cD-crn"/>
+        <segue reference="MMJ-xT-x3O"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="gear" catalog="system" width="128" height="119"/>
