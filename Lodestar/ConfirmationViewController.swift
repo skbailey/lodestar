@@ -24,7 +24,7 @@ class ConfirmationViewController: UIViewController, UITextFieldDelegate {
         
         CloudService.shared.confirmSignUp(with: oneTimePass) {  [weak self] in
             DispatchQueue.main.async {
-                self?.navigationController?.popToRootViewController(animated: false)
+                self?.performSegue(withIdentifier: "loginFromConfirmation", sender: self)
             }
         }
         

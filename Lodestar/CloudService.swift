@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 import Amplify
 import AWSCognitoAuthPlugin
 
@@ -62,7 +63,7 @@ class CloudService {
     
     // MARK: - User Authentication
 
-    public func signUp(email: String, password: String, completion: @escaping () -> Void) {
+    public func signUp(email: String, password: String, completion: @escaping (Result<AuthSignUpResult, AuthError>) -> Void) {
         let userAttributes = [AuthUserAttribute(.email, value: email)]
         let options = AuthSignUpRequest.Options(userAttributes: userAttributes)
         
@@ -77,10 +78,11 @@ class CloudService {
                 }
                 
                 self.authData.username = email
-                completion()
             case .failure(let error):
                 print("An error occurred while registering a user \(error)")
             }
+            
+            completion(result)
         }
     }
     

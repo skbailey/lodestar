@@ -15,6 +15,7 @@
 		D40603B22748C05B00634FCF /* Amplify in Frameworks */ = {isa = PBXBuildFile; productRef = D40603B12748C05B00634FCF /* Amplify */; };
 		D40603B42748C07800634FCF /* CloudService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40603B32748C07800634FCF /* CloudService.swift */; };
 		D40603B62748C29F00634FCF /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40603B52748C29F00634FCF /* UserData.swift */; };
+		D40603B82748DEC600634FCF /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40603B72748DEC600634FCF /* SettingsViewController.swift */; };
 		D4AD197E2744AB20001F689C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4AD197D2744AB20001F689C /* AppDelegate.swift */; };
 		D4AD19802744AB20001F689C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4AD197F2744AB20001F689C /* SceneDelegate.swift */; };
 		D4AD19822744AB20001F689C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4AD19812744AB20001F689C /* ViewController.swift */; };
@@ -34,6 +35,7 @@
 		D40603AB2748BD0200634FCF /* awsconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = awsconfiguration.json; sourceTree = "<group>"; };
 		D40603B32748C07800634FCF /* CloudService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudService.swift; sourceTree = "<group>"; };
 		D40603B52748C29F00634FCF /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		D40603B72748DEC600634FCF /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		D4AD197A2744AB20001F689C /* Lodestar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lodestar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4AD197D2744AB20001F689C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D4AD197F2744AB20001F689C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 				D4AD19812744AB20001F689C /* ViewController.swift */,
 				D40603B52748C29F00634FCF /* UserData.swift */,
 				D4AD19832744AB20001F689C /* Main.storyboard */,
+				D40603B72748DEC600634FCF /* SettingsViewController.swift */,
 				D4AD19972744D1D9001F689C /* ProfileSetupViewController.swift */,
 				D4AD19952744C123001F689C /* ConfirmationViewController.swift */,
 				D4AD19932744BE8E001F689C /* SignupViewController.swift */,
@@ -194,6 +197,7 @@
 				D4AD19962744C123001F689C /* ConfirmationViewController.swift in Sources */,
 				D4AD19922744BE13001F689C /* LoginViewController.swift in Sources */,
 				D4AD19822744AB20001F689C /* ViewController.swift in Sources */,
+				D40603B82748DEC600634FCF /* SettingsViewController.swift in Sources */,
 				D40603B62748C29F00634FCF /* UserData.swift in Sources */,
 				D4AD19942744BE8E001F689C /* SignupViewController.swift in Sources */,
 				D4AD197E2744AB20001F689C /* AppDelegate.swift in Sources */,

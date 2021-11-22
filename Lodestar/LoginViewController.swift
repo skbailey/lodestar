@@ -33,6 +33,9 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         
         CloudService.shared.login(email: email, password: password) { [weak self] in
             DispatchQueue.main.async {
+                self?.emailTextField.text = nil
+                self?.passwordTextField.text = nil
+                
                 self?.performSegue(withIdentifier: "login", sender: self)
             }
         }
