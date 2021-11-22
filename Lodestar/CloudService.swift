@@ -103,17 +103,9 @@ class CloudService {
         }
     }
     
-    public func login(email: String, password: String, completion: @escaping () -> Void) {
+    public func login(email: String, password: String, completion: @escaping (Result<AuthSignInResult, AuthError>) -> Void) {
         Amplify.Auth.signIn(username: email, password: password) { result in
-            debugPrint(result)
-            
-            switch result {
-            case .success(let loginResult):
-                debugPrint(loginResult)
-                completion()
-            case .failure(let error):
-                print("An error occurred while registering a user \(error)")
-            }
+            completion(result)
         }
     }
     

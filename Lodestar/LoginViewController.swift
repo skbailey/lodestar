@@ -36,16 +36,35 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             return
         }
         
-        CloudService.shared.login(email: email, password: password) { [weak self] in
+        CloudService.shared.login(email: email, password: password) { [weak self] result in
             DispatchQueue.main.async {
                 self?.emailTextField.text = nil
                 self?.emailErrorLabel.text = nil
                 self?.passwordTextField.text = nil
                 self?.passwordErrorLabel.text = nil
                 
+                switch result {
+                case .failure(let error):
+                    print("An error occurred while registering a user \(error)")
+                    self?.showAlert(message: error.errorDescription)
+                    return
+                case .success(let loginResult):
+                    debugPrint(loginResult)
+                }
+                
                 self?.performSegue(withIdentifier: "login", sender: self)
             }
         }
+    }
+    
+    func showAlert(message: String) {
+        let alert = UIAlertController(title: "Sign In Failed", message: message, preferredStyle: .alert)
+
+        alert.addAction(UIAlertAction(title: "OK", style: .default) { _ in
+            //OK Action
+        })
+        
+        self.present(alert, animated: true, completion: nil)
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
