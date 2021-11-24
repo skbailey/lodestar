@@ -16,6 +16,11 @@
 		D40603B42748C07800634FCF /* CloudService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40603B32748C07800634FCF /* CloudService.swift */; };
 		D40603B62748C29F00634FCF /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40603B52748C29F00634FCF /* UserData.swift */; };
 		D40603B82748DEC600634FCF /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40603B72748DEC600634FCF /* SettingsViewController.swift */; };
+		D46E1CEA274C926D001B604A /* SettingsItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46E1CE9274C926D001B604A /* SettingsItemViewController.swift */; };
+		D46E1CED274DA0C1001B604A /* Weight.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46E1CEC274DA0C1001B604A /* Weight.swift */; };
+		D46E1CEF274E27ED001B604A /* Height.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46E1CEE274E27ED001B604A /* Height.swift */; };
+		D46E1CF1274E2AFB001B604A /* Ethnicity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46E1CF0274E2AFB001B604A /* Ethnicity.swift */; };
+		D46E1CF3274E2DC8001B604A /* Gender.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46E1CF2274E2DC8001B604A /* Gender.swift */; };
 		D4AD197E2744AB20001F689C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4AD197D2744AB20001F689C /* AppDelegate.swift */; };
 		D4AD19802744AB20001F689C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4AD197F2744AB20001F689C /* SceneDelegate.swift */; };
 		D4AD19822744AB20001F689C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4AD19812744AB20001F689C /* ViewController.swift */; };
@@ -36,6 +41,11 @@
 		D40603B32748C07800634FCF /* CloudService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudService.swift; sourceTree = "<group>"; };
 		D40603B52748C29F00634FCF /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		D40603B72748DEC600634FCF /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		D46E1CE9274C926D001B604A /* SettingsItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsItemViewController.swift; sourceTree = "<group>"; };
+		D46E1CEC274DA0C1001B604A /* Weight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weight.swift; sourceTree = "<group>"; };
+		D46E1CEE274E27ED001B604A /* Height.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Height.swift; sourceTree = "<group>"; };
+		D46E1CF0274E2AFB001B604A /* Ethnicity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ethnicity.swift; sourceTree = "<group>"; };
+		D46E1CF2274E2DC8001B604A /* Gender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gender.swift; sourceTree = "<group>"; };
 		D4AD197A2744AB20001F689C /* Lodestar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lodestar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4AD197D2744AB20001F689C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D4AD197F2744AB20001F689C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -72,6 +82,17 @@
 			name = AmplifyConfig;
 			sourceTree = "<group>";
 		};
+		D46E1CEB274DA0AE001B604A /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				D46E1CEC274DA0C1001B604A /* Weight.swift */,
+				D46E1CEE274E27ED001B604A /* Height.swift */,
+				D46E1CF0274E2AFB001B604A /* Ethnicity.swift */,
+				D46E1CF2274E2DC8001B604A /* Gender.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
 		D4AD19712744AB20001F689C = {
 			isa = PBXGroup;
 			children = (
@@ -94,11 +115,13 @@
 		D4AD197C2744AB20001F689C /* Lodestar */ = {
 			isa = PBXGroup;
 			children = (
+				D46E1CEB274DA0AE001B604A /* Settings */,
 				D4AD197D2744AB20001F689C /* AppDelegate.swift */,
 				D4AD197F2744AB20001F689C /* SceneDelegate.swift */,
 				D4AD19812744AB20001F689C /* ViewController.swift */,
 				D40603B52748C29F00634FCF /* UserData.swift */,
 				D4AD19832744AB20001F689C /* Main.storyboard */,
+				D46E1CE9274C926D001B604A /* SettingsItemViewController.swift */,
 				D40603B72748DEC600634FCF /* SettingsViewController.swift */,
 				D4AD19972744D1D9001F689C /* ProfileSetupViewController.swift */,
 				D4AD19952744C123001F689C /* ConfirmationViewController.swift */,
@@ -194,16 +217,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D46E1CEF274E27ED001B604A /* Height.swift in Sources */,
 				D4AD19962744C123001F689C /* ConfirmationViewController.swift in Sources */,
 				D4AD19922744BE13001F689C /* LoginViewController.swift in Sources */,
 				D4AD19822744AB20001F689C /* ViewController.swift in Sources */,
 				D40603B82748DEC600634FCF /* SettingsViewController.swift in Sources */,
 				D40603B62748C29F00634FCF /* UserData.swift in Sources */,
+				D46E1CF3274E2DC8001B604A /* Gender.swift in Sources */,
 				D4AD19942744BE8E001F689C /* SignupViewController.swift in Sources */,
 				D4AD197E2744AB20001F689C /* AppDelegate.swift in Sources */,
 				D40603B42748C07800634FCF /* CloudService.swift in Sources */,
+				D46E1CF1274E2AFB001B604A /* Ethnicity.swift in Sources */,
+				D46E1CEA274C926D001B604A /* SettingsItemViewController.swift in Sources */,
 				D4AD19982744D1D9001F689C /* ProfileSetupViewController.swift in Sources */,
 				D4AD19802744AB20001F689C /* SceneDelegate.swift in Sources */,
+				D46E1CED274DA0C1001B604A /* Weight.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
