@@ -361,6 +361,7 @@
                     <connections>
                         <outlet property="settingsTable" destination="Gix-ig-WnI" id="V9U-08-62v"/>
                         <segue destination="FBq-t3-lpU" kind="show" identifier="updateSettingItem" animates="NO" id="FFF-oG-dui"/>
+                        <segue destination="KAt-Ul-fPb" kind="show" identifier="updateSettingItemDateOfBirth" animates="NO" id="oRS-ea-dgZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ybg-Oo-XCN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -420,7 +421,65 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lZt-p7-hbf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1464" y="2906"/>
+            <point key="canvasLocation" x="916" y="2937"/>
+        </scene>
+        <!--Setting Item Date Of Birth View Controller-->
+        <scene sceneID="NRp-3E-AdC">
+            <objects>
+                <viewController id="KAt-Ul-fPb" customClass="SettingItemDateOfBirthViewController" customModule="Lodestar" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Pvt-cA-w3o">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FxL-6Q-rMp">
+                                <rect key="frame" x="0.0" y="656" width="414" height="206"/>
+                                <subviews>
+                                    <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jt8-kI-Fpd">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                        <items>
+                                            <navigationItem title="Title" id="Dtj-dl-PB1">
+                                                <barButtonItem key="leftBarButtonItem" title="Cancel" id="7uA-h0-sNg">
+                                                    <connections>
+                                                        <action selector="cancel:" destination="KAt-Ul-fPb" id="bLQ-Cy-a0y"/>
+                                                    </connections>
+                                                </barButtonItem>
+                                                <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="Cuo-K1-A8A">
+                                                    <connections>
+                                                        <action selector="done:" destination="KAt-Ul-fPb" id="DqP-IC-vmJ"/>
+                                                    </connections>
+                                                </barButtonItem>
+                                            </navigationItem>
+                                        </items>
+                                    </navigationBar>
+                                    <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="lWZ-aH-Wjc">
+                                        <rect key="frame" x="0.0" y="44" width="414" height="162"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                    </datePicker>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="206" id="Bch-U7-iT2"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="NmD-wa-zRG"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="FxL-6Q-rMp" firstAttribute="bottom" secondItem="NmD-wa-zRG" secondAttribute="bottom" id="3pN-TI-z4q"/>
+                            <constraint firstItem="FxL-6Q-rMp" firstAttribute="leading" secondItem="NmD-wa-zRG" secondAttribute="leading" id="hSK-G8-3vm"/>
+                            <constraint firstItem="FxL-6Q-rMp" firstAttribute="trailing" secondItem="NmD-wa-zRG" secondAttribute="trailing" id="vHh-0Z-RO0"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="s5o-0H-89o"/>
+                    <connections>
+                        <outlet property="datePicker" destination="lWZ-aH-Wjc" id="CmS-sf-fkk"/>
+                        <outlet property="navItem" destination="Dtj-dl-PB1" id="s87-NY-bWK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E3o-Bn-ptx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2020" y="2936"/>
         </scene>
         <!--Settings View Controller-->
         <scene sceneID="rva-UL-8l7">

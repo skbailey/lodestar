@@ -14,6 +14,11 @@ struct Setting {
     var selected: String = "Fill In"
 }
 
+protocol ProfileSettingsDelegate {
+    func didChooseValue(index: Int) -> Void
+    func didChooseValue(date: Date) -> Void
+}
+
 class ProfileSetupViewController: UIViewController, UITableViewDataSource, UITableViewDelegate,
                                   ProfileSettingsDelegate {
     
@@ -34,12 +39,17 @@ class ProfileSetupViewController: UIViewController, UITableViewDataSource, UITab
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let indexPath = settingsTable.indexPathForSelectedRow
+        let setting = profileSettings[indexPath!.row]
+
         if segue.identifier == "updateSettingItem" {
-            let indexPath = settingsTable.indexPathForSelectedRow
-            let setting = profileSettings[indexPath!.row]
             let destination = segue.destination as! SettingsItemViewController
             destination.title = setting.name
             destination.pickerValues = setting.values
+            destination.delegate = self
+        } else if segue.identifier == "updateSettingItemDateOfBirth" {
+            let destination = segue.destination as! SettingItemDateOfBirthViewController
+            destination.title = setting.name
             destination.delegate = self
         }
     }
@@ -63,9 +73,9 @@ class ProfileSetupViewController: UIViewController, UITableViewDataSource, UITab
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.row > 0 {
-            // Ignore the initial row: Date of Birth
-            // This uses a different segue
             performSegue(withIdentifier: "updateSettingItem", sender: self)
+        } else {
+            performSegue(withIdentifier: "updateSettingItemDateOfBirth", sender: self)
         }
     }
 
@@ -77,5 +87,12 @@ class ProfileSetupViewController: UIViewController, UITableViewDataSource, UITab
         let value = setting.values[selectedIndex]
         let cell = settingsTable.cellForRow(at: indexPath!)
         cell?.detailTextLabel?.text = value
+    }
+    
+    func didChooseValue(date selectedDate: Date) {
+        let dateOfBirth = DateOfBirth(current: selectedDate)
+        let indexPath = settingsTable.indexPathForSelectedRow
+        let cell = settingsTable.cellForRow(at: indexPath!)
+        cell?.detailTextLabel?.text = dateOfBirth.formatted
     }
 }

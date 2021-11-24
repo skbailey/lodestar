@@ -7,10 +7,6 @@
 
 import UIKit
 
-protocol ProfileSettingsDelegate {
-    func didChooseValue(index: Int) -> Void
-}
-
 class SettingsItemViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     @IBOutlet weak var picker: UIPickerView!
     @IBOutlet weak var navItem: UINavigationItem!

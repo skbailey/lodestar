@@ -21,6 +21,8 @@
 		D46E1CEF274E27ED001B604A /* Height.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46E1CEE274E27ED001B604A /* Height.swift */; };
 		D46E1CF1274E2AFB001B604A /* Ethnicity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46E1CF0274E2AFB001B604A /* Ethnicity.swift */; };
 		D46E1CF3274E2DC8001B604A /* Gender.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46E1CF2274E2DC8001B604A /* Gender.swift */; };
+		D46E1CF5274EDAFE001B604A /* SettingItemDateOfBirthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46E1CF4274EDAFE001B604A /* SettingItemDateOfBirthViewController.swift */; };
+		D46E1CF7274EE13F001B604A /* DateOfBirth.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46E1CF6274EE13F001B604A /* DateOfBirth.swift */; };
 		D4AD197E2744AB20001F689C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4AD197D2744AB20001F689C /* AppDelegate.swift */; };
 		D4AD19802744AB20001F689C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4AD197F2744AB20001F689C /* SceneDelegate.swift */; };
 		D4AD19822744AB20001F689C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4AD19812744AB20001F689C /* ViewController.swift */; };
@@ -46,6 +48,8 @@
 		D46E1CEE274E27ED001B604A /* Height.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Height.swift; sourceTree = "<group>"; };
 		D46E1CF0274E2AFB001B604A /* Ethnicity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ethnicity.swift; sourceTree = "<group>"; };
 		D46E1CF2274E2DC8001B604A /* Gender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gender.swift; sourceTree = "<group>"; };
+		D46E1CF4274EDAFE001B604A /* SettingItemDateOfBirthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingItemDateOfBirthViewController.swift; sourceTree = "<group>"; };
+		D46E1CF6274EE13F001B604A /* DateOfBirth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateOfBirth.swift; sourceTree = "<group>"; };
 		D4AD197A2744AB20001F689C /* Lodestar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lodestar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4AD197D2744AB20001F689C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D4AD197F2744AB20001F689C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -89,6 +93,7 @@
 				D46E1CEE274E27ED001B604A /* Height.swift */,
 				D46E1CF0274E2AFB001B604A /* Ethnicity.swift */,
 				D46E1CF2274E2DC8001B604A /* Gender.swift */,
+				D46E1CF6274EE13F001B604A /* DateOfBirth.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -121,6 +126,7 @@
 				D4AD19812744AB20001F689C /* ViewController.swift */,
 				D40603B52748C29F00634FCF /* UserData.swift */,
 				D4AD19832744AB20001F689C /* Main.storyboard */,
+				D46E1CF4274EDAFE001B604A /* SettingItemDateOfBirthViewController.swift */,
 				D46E1CE9274C926D001B604A /* SettingsItemViewController.swift */,
 				D40603B72748DEC600634FCF /* SettingsViewController.swift */,
 				D4AD19972744D1D9001F689C /* ProfileSetupViewController.swift */,
@@ -230,6 +236,8 @@
 				D46E1CF1274E2AFB001B604A /* Ethnicity.swift in Sources */,
 				D46E1CEA274C926D001B604A /* SettingsItemViewController.swift in Sources */,
 				D4AD19982744D1D9001F689C /* ProfileSetupViewController.swift in Sources */,
+				D46E1CF7274EE13F001B604A /* DateOfBirth.swift in Sources */,
+				D46E1CF5274EDAFE001B604A /* SettingItemDateOfBirthViewController.swift in Sources */,
 				D4AD19802744AB20001F689C /* SceneDelegate.swift in Sources */,
 				D46E1CED274DA0C1001B604A /* Weight.swift in Sources */,
 			);
