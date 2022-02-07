@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 import Amplify
 import AWSCognitoAuthPlugin
+import AWSPluginsCore
 
 struct AuthMetadata {
     var username: String?
@@ -105,6 +106,7 @@ class CloudService {
     
     public func login(email: String, password: String, completion: @escaping (Result<AuthSignInResult, AuthError>) -> Void) {
         Amplify.Auth.signIn(username: email, password: password) { result in
+            self.fetchSession()
             completion(result)
         }
     }
@@ -114,10 +116,22 @@ class CloudService {
          Amplify.Auth.fetchAuthSession { (result) in
              do {
                  let session = try result.get()
+                 
+                 // Get AWS credentials
+                if let awsCredentialsProvider = session as? AuthAWSCredentialsProvider {
+                    let credentials = try awsCredentialsProvider.getAWSCredentials().get()
+                    print("Access key - \(credentials.accessKey) ")
+                }
+ 
+                // Get cognito user pool token
+                if let cognitoTokenProvider = session as? AuthCognitoTokensProvider {
+                    let tokens = try cognitoTokenProvider.getCognitoTokens().get()
+                    print("Id token - \(tokens.idToken) ")
+                }
                         
                  // let's update UserData and the UI
                  print("is user signed in?", session.isSignedIn)
-                 self.updateUserData(withSignInStatus: session.isSignedIn)
+                 // self.updateUserData(withSignInStatus: session.isSignedIn)
              } catch {
                   print("Fetch auth session failed with error - \(error)")
                   return
